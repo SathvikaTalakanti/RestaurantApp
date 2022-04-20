@@ -3,7 +3,6 @@ var course = ["starters", "main course", "desserts", "beverages"];
 
 function search() {
     var searchfilter = document.getElementById("search").value;
-    console.log("anil");
     console.log(searchfilter);
     searchfilter = searchfilter.toLowerCase();
     if (searchfilter == "") {
@@ -63,7 +62,6 @@ function drag(ev) {
 function drop(ev, target) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
-    console.log("Anilkumar")
     console.log(target.id);
     console.log(data);
     let item = document.getElementById(data).textContent;
@@ -76,12 +74,9 @@ function drop(ev, target) {
     let tbodies = document.getElementById(setTableId).getElementsByTagName("tbody");
     console.log(tbodies);
     console.log(tbodies.length);
-    console.log("Anilkumar")
     for (var i = 0; i < tbodies.length; i++) {
-        console.log("Anilkumar")
         let tr = tbodies[i].children[0];
         let itemname = tr.children[0].textContent;
-        console.log("Anilkumar")
         console.log(itemname);
         console.log(vals[0]);
         if (itemname == vals[0]) {
